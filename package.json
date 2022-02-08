@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@pdftron/collab-client": "^2.0.0-alpha.27",
+    "@pdftron/collab-db-postgresql": "^2.0.0-alpha.25",
+    "@pdftron/collab-server": "^2.0.0-alpha.27",
+    "@pdftron/webviewer": "^8.2.0",
+    "dotenv": "^16.0.0",
+    "joi": "^17.6.0",
+    "parcel-bundler": "1.12.3",
+    "parcel-plugin-static-files-copy": "2.5.1"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "scripts": {
+    "start:server": "node server.js",
+    "start:client": "parcel client/index.html"
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "node_modules/@pdftron/webviewer/public",
+        "staticOutDir": "public/webviewer"
+      }
+    ],
+    "watcherGlob": "**"
+  }
+}
